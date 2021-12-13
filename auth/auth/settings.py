@@ -122,7 +122,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-JWT_SECRET_KEY = 'adadjfsdfnmvfmns'
+JWT_SECRET_KEY = 'sdgsgfgsdfgsdfgdsjfgksdnmghsdghsdfhfjksdfhk'
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 

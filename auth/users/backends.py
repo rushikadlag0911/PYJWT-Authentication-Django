@@ -11,15 +11,15 @@ class JWTAuthentication(authentication.BaseAuthentication):
 
         if not auth_data:
             return None
-
+        
         token = auth_data.decode('utf-8').split(' ')
-
+        
         try:
             payload = jwt.decode(token, settings.JWT_SECRET_KEY, algorithms="HS256")
 
             user = User.objects.get(username=payload['username'])
 
-            return (user, token)
+            return (user,token)
 
         except jwt.DecodeError as identifier:
             raise exceptions.AuthenticationFailed('Your token is invalid,login')
