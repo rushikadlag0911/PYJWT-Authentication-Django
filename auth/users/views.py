@@ -7,8 +7,6 @@ from rest_framework import status
 from django.conf import settings
 
 import jwt
-
-
 # Create your views here.
 class RegisterView(GenericAPIView):
     serializer_class = UserSerializer
@@ -24,7 +22,7 @@ class RegisterView(GenericAPIView):
 class LoginView(GenericAPIView):
     serializer_class = LoginSerializer
     
-    def post(self, request):
+    def get(self, request):
         data = request.data
         username = data.get('username', '')
         password = data.get('password', '')
